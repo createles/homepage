@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr 2fr 0.5fr;
+}
+
+header {
+  width: 100%;
+  padding: 4rem;
+  background-color: #00414dc4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  width: 25%;
+  max-width: 30rem;
+}
+
+header .about-tile {
+  max-width: 40%;
+  padding: 2rem;
+  background-color: whitesmoke;
+}
+
+main {
+  width: 100%;
+  background-color: white;
+}
+
+footer {
+  width: 100%;
+  background: #00414dc4;
+  display: flex;
+}
+
+footer .contact-info {
+  background-color: rgba(150, 5, 150, 0.308);
+}
+
+footer img {
+  max-width: 30rem;
+}
