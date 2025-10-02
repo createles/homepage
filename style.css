@@ -5,14 +5,14 @@
 }
 
 body {
-  width: 100vw;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: 1fr 2fr 0.5fr;
 }
 
 header {
   width: 100%;
-  padding: 4rem;
+  padding: 3rem;
   background-color: #00414dc4;
   display: flex;
   justify-content: center;
@@ -32,16 +32,34 @@ header .about-tile {
 
 main {
   width: 100%;
+  padding: 5rem;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+main .tile-container {
+  display: flex;
+  background-color: rgba(127, 255, 212, 0.596);
+  justify-content: space-between;
+}
+
+main .proj-tile {
+  width: 30%;
+  height: 20rem;
+  background-color: chartreuse;
 }
 
 footer {
   width: 100%;
   background: #00414dc4;
   display: flex;
+  justify-content: space-around;
+  padding: 2rem;
 }
 
 footer .contact-info {
+  max-width: 30%;
   background-color: rgba(150, 5, 150, 0.308);
 }
 
