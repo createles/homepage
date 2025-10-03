@@ -7,7 +7,8 @@
 body {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 2fr 0.5fr;
+  grid-template-rows: auto 1fr auto; /* responsive sizing; content-sized header,
+   content-sized footer, main stretches or shrinks to content*/
 }
 
 header {
@@ -34,18 +35,20 @@ main {
   width: 100%;
   padding: 5rem;
   background-color: white;
-  display: flex;
-  flex-direction: column;
+}
+
+main h1 {
+  margin-bottom: 1rem;
 }
 
 main .tile-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   background-color: rgba(127, 255, 212, 0.596);
-  justify-content: space-between;
+  gap: 3rem;
 }
 
 main .proj-tile {
-  width: 30%;
   height: 20rem;
   background-color: chartreuse;
 }
@@ -65,4 +68,84 @@ footer .contact-info {
 
 footer img {
   max-width: 30rem;
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 1rem;
+  }
+  header img {
+    width: 30%;
+    max-width: 100%;
+  }
+
+  header .about-tile {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  main {
+    padding: 5rem 2rem;
+  }
+
+  main h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  main .tile-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 640px) {
+  header {
+    padding: 1rem;
+    display: block;
+  }
+  header img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  header .about-tile {
+    max-width: 100%;
+  }
+
+  main {
+    padding: 5rem 2rem;
+  }
+
+  main h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  main .tile-container {
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
+
+  footer {
+    display: block;
+  }
+
+  .contact-info h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  footer .contact-info {
+    max-width: 100%;
+    font-size: 1.5rem;
+  }
+
+  footer .contact-blurb {
+    margin: 1rem 0;
+  }
+
+  footer img {
+    max-width: 100%;
+  }
+
 }
